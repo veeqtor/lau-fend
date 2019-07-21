@@ -1,0 +1,114 @@
+//-------------------------------------------
+// @Styles for the Authentication page
+// -------------------------------------------
+
+.auth {
+  display: grid;
+  grid-template-areas: "logo logo" "left-section right-section";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3.125rem auto;
+  height: 100vh;
+  padding: 0 3rem;
+  width: 100%;
+
+  @include to($breakpoint-md) {
+    grid-template-areas: "logo" "right-section";
+    grid-template-columns: auto;
+
+    &-left {
+      display: none;
+    }
+  }
+
+  &-logo {
+    grid-area: logo;
+
+    @include to($breakpoint-md) {
+      justify-self: center;
+    }
+  }
+
+  &-left {
+    align-self: center;
+    grid-area: left-section;
+    height: fit-content;
+    justify-self: center;
+    width: 100%;
+  }
+
+  &-right {
+    align-self: center;
+    grid-area: right-section;
+    height: fit-content;
+    justify-self: center;
+    width: 100%;
+  }
+}
+
+//-------------------------------------------
+// @Styles for the Authentication form
+// -------------------------------------------
+
+.auth-form {
+  max-width: 31.25rem;
+
+  @include to($breakpoint-sm) {
+    width: 100%;
+  }
+
+  &-wrapper {
+    background: colors('white-color');
+    border-radius: 0.625rem;
+    display: grid;
+    grid-row-gap: 0.625rem;
+    grid-template-areas: "fh fh fh" "fc fc fc" "fa fa fa" "ff ff ff";
+    grid-template-columns: repeat(3, minmax(auto, 100%));
+    grid-template-rows: repeat(4, minmax(auto, 100%));
+    padding: 3rem;
+
+    @include to($breakpoint-sm) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &-header {
+    align-items: center;
+    display: flex;
+    grid-area: fh;
+    justify-content: space-between;
+  }
+
+  &-content {
+    grid-area: fc;
+  }
+
+  &-action {
+    align-items: center;
+    display: flex;
+    grid-area: fa;
+    justify-content: space-between;
+  }
+
+  .links {
+    font-size: 85%;
+    font-weight: 500;
+
+    a {
+      color: lighten(colors('black-color'), 30%);
+
+      @include transition(300ms);
+
+      &:hover {
+        color: colors('black-color');
+      }
+    }
+  }
+
+  &-footer {
+    align-self: center;
+    grid-area: ff;
+    justify-self: center;
+    width: 100%;
+  }
+}

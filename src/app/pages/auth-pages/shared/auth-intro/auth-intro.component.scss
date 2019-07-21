@@ -1,0 +1,16 @@
+@import "../../../../../styles/abstracts/mixins";
+@import "../../../../../styles/abstracts/variables";
+
+.auth-intro {
+  width: 55%;
+
+  h1 {
+    color: colors('white-color');
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  p {
+    color: colors('white-color');
+  }
+}

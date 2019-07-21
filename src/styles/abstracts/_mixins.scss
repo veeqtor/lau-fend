@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/variables";
+
 @mixin transition($time) {
   -moz-transition: all #{$time} ease-in-out;
   -o-transition: all #{$time} ease-in-out;
@@ -9,6 +11,13 @@
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+// ---------------------------------------------------------
+// @Functions
+// ---------------------------------------------------------
+@function colors($color-key) {
+  @return map-get($default-colors, #{$color-key});
 }
 
 // ---------------------------------------------------------
@@ -120,8 +129,4 @@
   @media screen and (min-width: $start) and (max-width: $end - 1px) {
     @content;
   }
-}
-
-@mixin animate($name, $duration) {
-  animation: #{$name} #{$duration} linear;
 }

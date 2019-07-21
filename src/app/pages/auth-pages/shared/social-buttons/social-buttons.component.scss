@@ -1,0 +1,36 @@
+@import "../../../../../styles/abstracts/variables";
+@import "../../../../../styles/abstracts/mixins";
+
+.social {
+  &-divider {
+    align-items: center;
+    display: flex;
+
+    span:nth-of-type(even) {
+      color: lighten(colors('black-color'), 50%);
+      font-size: 70%;
+      padding: 0 1rem;
+    }
+
+    span:nth-of-type(odd) {
+      background: lighten(colors('black-color'), 60%);
+      display: inline-block;
+      height: 0.0625rem;
+      width: 100%;
+    }
+  }
+
+  &-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      margin-right: 0.7125rem;
+
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+}
