@@ -1,0 +1,10 @@
+@import "../../../../styles/abstracts/variables";
+@import "../../../../styles/abstracts/mixins";
+
+.logo a {
+  color: colors('white-color');
+
+  @include to($breakpoint-md) {
+    color: colors('black-color');
+  }
+}

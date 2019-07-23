@@ -1,0 +1,21 @@
+@import "../../../../../styles/abstracts/variables";
+@import "../../../../../styles/abstracts/mixins";
+
+#login-bg {
+  background-image: linear-gradient(112.89deg, colors('primary-light') 21.64%, colors('gradient-stop') 185.96%);
+  clip-path: url(#svgPath);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+
+  svg {
+    position: absolute;
+  }
+
+  @include to($breakpoint-md) {
+    display: none;
+    left: 0;
+  }
+}

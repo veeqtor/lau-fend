@@ -1,4 +1,21 @@
 //-------------------------------------------
+// @Colors
+// -------------------------------------------
+$default-colors: (
+  primary: #252f73,
+  primary-light: #3f49b6,
+  secondary: #d9dbf0,
+  secondary-light: #f7f8ff,
+  white-color: #fff,
+  black-color: #212529,
+  grey-color: #bfbfbf,
+  twitter: #00acee,
+  google: #db4437,
+  facebook: #4267b2,
+  gradient-stop: #fd00d6,
+);
+
+//-------------------------------------------
 // @BreakPoints
 // -------------------------------------------
 $breakpoint-xs: 0;

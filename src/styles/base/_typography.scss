@@ -1,10 +1,15 @@
 @import "../abstracts/variables";
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Signika:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap');
 
 * {
-  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -12,10 +17,37 @@ html {
   height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Nunito", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
 body {
-  font-family: "Signika", "Montserrat", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: colors('black-color');
+  font-family: "Nunito", "Montserrat", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
   margin: 0;
   min-height: 100%;
   padding: 0;
   position: relative;
+}
+
+.text-muted {
+  color: lighten(colors('black-color'), 45%);
+  font-size: 70%;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

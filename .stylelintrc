@@ -14,7 +14,9 @@
           "for",
           "include",
           "extend",
-          "ignores"
+          "ignores",
+          "return",
+          "function"
         ]
       }
     ],

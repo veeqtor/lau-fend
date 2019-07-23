@@ -1,0 +1,54 @@
+<section class="auth-form">
+  <form class="auth-form-wrapper">
+    <section class="auth-form-header">
+      <h2 class="text-uppercase">Login</h2>
+    </section>
+
+    <section class="auth-form-content">
+      <div class="form-grp">
+        <label class="form-label">
+          <input
+            class="form-ctrl form-ctrl-sm"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+            autocomplete="email"
+            type="email">
+          <span class="form-input-line"></span>
+        </label>
+      </div>
+      <div class="form-grp">
+        <label class="form-label">
+          <input
+            class="form-ctrl form-ctrl-sm"
+            aria-describedby="passwordHelp"
+            placeholder="Password"
+            autocomplete="current-password"
+            type="password">
+          <span class="form-input-line"></span>
+        </label>
+        <small class="form-txt text-muted">
+          Password must contain at least eight(8) characters,
+          one(1) uppercase character and a symbol.
+        </small>
+      </div>
+    </section>
+
+    <section class="auth-form-action">
+      <div class="links">
+        <a href="#!">Forgot password?</a>
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit">
+          Login
+        </button>
+      </div>
+    </section>
+
+    <section class="auth-form-footer">
+      <lau-social-buttons></lau-social-buttons>
+      <div class="links mt-1">
+        <span>Don't have one? <a [routerLink]="['/register']">Sign up</a></span>
+      </div>
+    </section>
+  </form>
+</section>
