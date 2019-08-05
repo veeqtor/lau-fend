@@ -1,5 +1,19 @@
 @import "../../styles/abstracts/variables";
 
+// ---------------------------------------------------------
+// @Functions
+// ---------------------------------------------------------
+@function colors($color-key) {
+  @return map-get($default-colors, #{$color-key});
+}
+
+// ---------------------------------------------------------
+// @Mixins
+// ---------------------------------------------------------
+@mixin webkit-helper($attribute, $value) {
+  -webkit-#{$attribute}: $value;
+}
+
 @mixin transition($time) {
   -moz-transition: all #{$time} ease-in-out;
   -o-transition: all #{$time} ease-in-out;
@@ -11,75 +25,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-// ---------------------------------------------------------
-// @Functions
-// ---------------------------------------------------------
-@function colors($color-key) {
-  @return map-get($default-colors, #{$color-key});
-}
-
-// ---------------------------------------------------------
-// @Padding helper Mixin
-// ---------------------------------------------------------
-@mixin padding-helper($position, $amount) {
-  @if $position=="top" {
-    .pt-#{$amount} {
-      padding-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="bottom" {
-    .pb-#{$amount} {
-      padding-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="left" {
-    .pl-#{$amount} {
-      padding-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="right" {
-    .pr-#{$amount} {
-      padding-#{$position}: #{$amount}rem;
-    }
-  }
-}
-
-// ---------------------------------------------------------
-// @Margin helper Mixin
-// ---------------------------------------------------------
-@mixin margin-helper($position, $amount) {
-  @if $position=="top" {
-    .mt-#{$amount} {
-      margin-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="bottom" {
-    .mb-#{$amount} {
-      margin-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="left" {
-    .ml-#{$amount} {
-      margin-#{$position}: #{$amount}rem;
-    }
-  }
-
-  @if $position=="right" {
-    .mr-#{$amount} {
-      margin-#{$position}: #{$amount}rem;
-    }
-  }
-}
-
-@mixin webkit-helper($attribute, $value) {
-  -webkit-#{$attribute}: $value;
 }
 
 // ---------------------------------------------------------

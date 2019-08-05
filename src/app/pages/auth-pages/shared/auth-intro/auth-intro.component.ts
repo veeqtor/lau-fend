@@ -14,11 +14,7 @@ export class AuthIntroComponent implements OnInit {
   }
 
   animate(): void {
-    this.tween.to('h1', 1.5, { x: '0', opacity: 1, ease: 'Bounce.easeOut' }, 0.5);
-    this.tween.to('h1', 0.5, { opacity: 1, ease: 'Power1.easeOut' }, 1.5);
-
-    this.tween.to('p', 1.5, { y: '0', opacity: 1, ease: 'Bounce.easeOut' }, 0.5);
-    this.tween.to('p', 0.5, { opacity: 1, ease: 'Power1.easeOut' }, 1.5);
+    this.tween.to('h1, p', 1.5, { opacity: 1, ease: 'Power1.easeOut' }, 0.5);
   }
 
   constructor() {

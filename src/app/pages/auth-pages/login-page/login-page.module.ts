@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LoginPageComponent } from './login-page.component';
 import { AuthSharedModule } from '../shared/auth-shared.module';
 import { LoginFormComponent } from '../../../shared/components/login-form/login-form.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LoginFormComponent } from '../../../shared/components/login-form/login-
     CommonModule,
     RouterModule,
     AuthSharedModule,
+    NgbDropdownModule,
   ],
 })
 
