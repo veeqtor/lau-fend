@@ -21,6 +21,7 @@
   }
 
   &-logo {
+    align-self: center;
     grid-area: logo;
 
     @include to($breakpoint-md) {
@@ -50,7 +51,8 @@
 // -------------------------------------------
 
 .auth-form {
-  max-width: 31.25rem;
+  display: grid;
+  justify-content: center;
 
   @include to($breakpoint-sm) {
     width: 100%;
@@ -64,7 +66,7 @@
     grid-template-areas: "fh fh fh" "fc fc fc" "fa fa fa" "ff ff ff";
     grid-template-columns: repeat(3, minmax(auto, 100%));
     grid-template-rows: repeat(4, minmax(auto, 100%));
-    padding: 3rem;
+    padding: 2rem;
 
     @include to($breakpoint-sm) {
       padding: 0;

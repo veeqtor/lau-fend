@@ -4,12 +4,12 @@
 // @Form styles
 // -------------------------------------------
 
-.form-ctrl {
+.form-control {
   background: colors('secondary-light');
   border: unset;
   border-radius: 0.1875rem;
   display: block;
-  height: calc(1.5em + .75rem + 2px);
+  height: calc(1.5em + .75rem + 2px + 0.06125rem);
   padding: .3125rem .75rem;
   width: 100%;
 
@@ -22,38 +22,28 @@
   }
 
   &::placeholder {
-    color: colors('grey-color');
-    font-size: 80%;
+    color: lighten(colors('black-color'), 50%);;
   }
 
   &-sm {
     font-size: .875rem;
-    height: calc(1.5em + .5rem + 2px);
+    height: calc(1.5em + .5rem + 2px + 0.0625rem);
     line-height: 1.5;
     padding: .25rem .5rem;
   }
 }
 
-.form-grp {
-  margin-bottom: 1rem;
-}
-
-input:focus + .form-input-line,
-select:focus + .form-input-line {
+input:focus + .form-label-line,
+select:focus + .form-label-line {
   background-color: colors('primary');
   width: 100%;
-}
-
-.form-txt {
-  display: inline-block;
-  margin-top: .25rem;
 }
 
 .form-label {
   display: unset;
   margin: unset;
 
-  .form-input-line {
+  &-line {
     background-color: transparent;
     display: block;
     height: 0.0625rem;
@@ -71,12 +61,7 @@ select:focus + .form-input-line {
 .btn {
   border: none;
   border-radius: 0.1875rem;
-  font-size: 90%;
-  font-weight: 400;
   outline: unset;
-  padding: .375rem 1rem;
-  text-align: center;
-  vertical-align: middle;
 
   @include transition(300ms);
 
@@ -88,11 +73,6 @@ select:focus + .form-input-line {
   &-primary {
     background: colors('primary-light');
     color: colors('white-color');
-  }
-
-  &-block {
-    display: block;
-    width: 100%;
   }
 
   &:hover {
@@ -126,40 +106,4 @@ select:focus + .form-input-line {
   &:hover {
     background: darken(colors('google'), 10%);
   }
-}
-
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled),
-button:not(:disabled) {
-  cursor: pointer;
-}
-
-//-------------------------------------------
-// @Padding and margins
-// -------------------------------------------
-
-@include padding-helper('top', 1);
-@include margin-helper('top', 1);
-@include padding-helper('top', 2);
-@include margin-helper('top', 2);
-@include padding-helper('top', 3);
-@include margin-helper('top', 3);
-@include padding-helper('top', 4);
-@include margin-helper('top', 4);
-@include padding-helper('bottom', 1);
-@include margin-helper('bottom', 1);
-@include padding-helper('bottom', 2);
-@include margin-helper('bottom', 2);
-@include padding-helper('bottom', 3);
-@include margin-helper('bottom', 3);
-@include padding-helper('bottom', 4);
-@include margin-helper('bottom', 4);
-
-//-------------------------------------------
-// @Images
-// -------------------------------------------
-.responsive {
-  height: auto;
-  max-width: 100%;
 }
