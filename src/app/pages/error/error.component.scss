@@ -1,0 +1,16 @@
+@import "../../../styles/abstracts/mixins";
+
+section {
+  flex-direction: column;
+  height: 100vh;
+
+  @include to($breakpoint-md) {
+    padding: 2rem;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  @include center;
+}

@@ -7,6 +7,8 @@ import { TimelineMax } from 'gsap';
   styleUrls: ['./auth-intro.component.scss'],
 })
 export class AuthIntroComponent implements OnInit {
+  constructor() {
+  }
   tween = new TimelineMax();
 
   ngOnInit(): void {
@@ -17,6 +19,5 @@ export class AuthIntroComponent implements OnInit {
     this.tween.to('h1, p', 1.5, { opacity: 1, ease: 'Power1.easeOut' }, 0.5);
   }
 
-  constructor() {
-  }
+
 }

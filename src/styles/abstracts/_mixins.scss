@@ -27,6 +27,10 @@
   justify-content: center;
 }
 
+@mixin shadow {
+  box-shadow: 0 0.125rem 0.5rem rgba(colors('black-color'), 0.15);
+}
+
 // ---------------------------------------------------------
 // @General Media Query Mixin
 // ---------------------------------------------------------

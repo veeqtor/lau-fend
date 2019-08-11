@@ -9,6 +9,7 @@ $default-colors: (
   white-color: #fff,
   black-color: #212529,
   grey-color: #bfbfbf,
+  dashboardbg-color: #f6f8fa,
   twitter: #00acee,
   google: #db4437,
   facebook: #4267b2,
@@ -23,3 +24,12 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+
+//-------------------------------------------
+// @Dashboard Variables
+// -------------------------------------------
+
+$sidebar-width: 15rem;
+$sidebar-width-collapsed: 4.375rem;
+$header-height: 4.375rem;
+$footer-height: 1.875rem;

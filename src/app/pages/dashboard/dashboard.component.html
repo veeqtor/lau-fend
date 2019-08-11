@@ -1,0 +1,78 @@
+<script src="dashboard.component.ts"></script>
+<section id="dashboard">
+  <header>
+    <section class="dashboard-header">
+      <div>
+        <h5>Logo</h5>
+      </div>
+
+      <!--Profile wrapper-->
+      <div class="nav-profile">
+        <small>Search Icon</small>
+        <small>Notification Icon</small>
+        <small>Profile</small>
+      </div>
+      <!--Profile wrapper end-->
+
+      <!--Mobile icons-->
+      <div class="dashboard-header-icons">
+        <span (click)="toggleMobileSidebar()">
+          <img alt="side-bar-icon" src="../assets/sidebar-icon.svg">
+        </span>
+        <span (click)="toggleMobileNav()">
+          <img alt="profile-icon" src="../assets/profile-icon.svg">
+        </span>
+      </div>
+      <!--Mobile icons end-->
+
+    </section>
+  </header>
+
+  <!--Mobile profile wrapper-->
+  <nav
+    class="mobile-nav"
+    [ngClass]="{ 'mobile-nav-show' : isMobileNavCollapsed }">
+    <div class="mobile-nav-profile">
+      <small>Search Icon</small>
+      <small>Notification Icon</small>
+      <small>Profile</small>
+    </div>
+  </nav>
+  <!--Mobile profile wrapper end-->
+
+
+  <!--Sidebar mobile overlay-->
+  <div (overlayClicked)="toggleMobileSidebar()"
+       [ngClass]="{ 'sidebar-overlay-show' : isSidebarCollapsed }"
+       class="sidebar-overlay"
+       lauSidebarOverlay></div>
+  <!--Sidebar mobile overlay end-->
+
+  <!--Side menu-->
+  <aside>
+    <section
+      class="dashboard-side-menu"
+      [ngClass]="{ 'dashboard-side-menu-show' : isSidebarCollapsed }">
+      <div class="sidebar-inner">
+        <p>Side menu</p>
+      </div>
+    </section>
+  </aside>
+  <!--Side menu end-->
+
+  <!--Main-->
+  <main>
+    <p>Main content</p>
+  </main>
+  <!--Main end-->
+
+
+  <!--Footer-->
+  <footer>
+    <section class="dashboard-footer">
+      <small>&copy; 2019</small>
+    </section>
+  </footer>
+  <!--Footer end-->
+
+</section>
